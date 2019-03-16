@@ -1,15 +1,8 @@
 <main>
-    {{ range (where .Data.Pages "post").GroupByDate "2006" -}}
-    <section>
-      <h2>{{ .Key }}</h2>
-
-        {{ range .Pages -}}
-        
-          <time datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">{{ .Date.Format "2006-01-02"}}</time>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        
-        {{- end }}
-      
-    </section>
+  {{ range .Pages.ByDate }}
+        <li>
+            <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+            <time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+        </li>
     {{ end }}
 </main>
