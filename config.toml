@@ -1,0 +1,57 @@
+baseurl = "/"
+languageCode = "en-us"
+title = "Hugo XMag"
+theme = "empowerity"
+googleAnalytics = ""
+disqusShortname = ""
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+preserveTaxonomyNames = true
+footnotereturnlinkcontents = "↩"
+hasCJKLanguage = true
+enableEmoji = true
+paginate = 6
+
+DefaultContentLanguage = "en"
+copyright = "phungkhanhlam@gmail.com"
+
+[languages]
+  [languages.en]
+    title = "Empowerity"
+    weight = 1
+  [languages.vn]
+    title = "Empowerity"
+    weight = 2
+
+[permalinks]
+    post = "/post/:year/:month/:day/:slug/"
+
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+[[menu.main]]
+    name = "Topic"
+    url = "/categories/"
+    weight = 3
+[[menu.main]]
+    name = "Keywords"
+    url = "/tags/"
+    weight = 4
+[[menu.main]]
+    name = "Archives"
+    url = "/archives/"
+
+[params]
+    description = "A website built through Hugo and blogdown."
+    summary_length = 300
+    github_edit = "https://github.com/yihui/hugo-xmag/edit/master/exampleSite/content/"
+    footer = "&copy; [Yihui Xie](https://yihui.name) 2017 | [Github](https://github.com/yihui) | [Twitter](https://twitter.com/xieyihui)"
+
+[params.text]
+    back = "&larr; Back to Home"
+    edit = "Edit this page &rarr;"
+    truncated = "&hellip;"
